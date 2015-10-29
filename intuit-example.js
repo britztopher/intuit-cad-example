@@ -13,13 +13,14 @@ var options = {
 var IntuitCad = require('intuit-cad');
 
 var client = new IntuitCad(authCredentials, options);
-//client.institutions()
-//  .then(function(institutions){
-//    console.log('institutions: ', institutions);
-//  },
-//  function(reason){
-//    console.log('message: ', reason);
-//  });
+
+client.institutions()
+ .then(function(institutions){
+   console.log('institutions: ', institutions);
+ },
+ function(reason){
+   console.log('message: ', reason);
+ });
 
 //client.deleteCustomer()
 //  .then(function(wasDeleted){
